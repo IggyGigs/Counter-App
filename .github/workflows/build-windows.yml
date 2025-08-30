@@ -30,7 +30,13 @@ jobs:
 
       - name: Build with PyInstaller
         run: |
-          pyinstaller --onefile --windowed --hidden-import=pynput --name "CrochetAssistant" --icon="icons/crochet assistant icon.ico" crochet_assistant.py
+          pyinstaller --onefile --windowed ^
+            --hidden-import=pynput ^
+            --hidden-import=pynput.keyboard ^
+            --hidden-import=pynput.mouse ^
+            --name "CrochetAssistant" ^
+            --icon="icons/crochet assistant icon.ico" ^
+            crochet_assistant.py
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
