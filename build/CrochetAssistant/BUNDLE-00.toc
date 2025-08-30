@@ -1,0 +1,3 @@
+([('CrochetAssistant',
+   '/Users/ignatiussutrisno/Documents/GitHub/Counter-App/dist/CrochetAssistant',
+   'EXECUTABLE')],)
