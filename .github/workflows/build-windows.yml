@@ -41,13 +41,13 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git tag v1.0.0
-          git push origin v1.0.0
+          git tag v1.0.1
+          git push origin v1.0.1
           
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0.0
+          tag_name: v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
