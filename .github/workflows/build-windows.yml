@@ -40,14 +40,14 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0.1
+          tag_name: v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload EXE to Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0.1
+          tag_name: v1.0.2
           files: dist/CrochetAssistant.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
