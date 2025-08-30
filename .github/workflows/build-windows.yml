@@ -36,7 +36,14 @@ jobs:
         with:
           name: Crochet-Assistant-Windows
           path: dist/CrochetAssistant.exe
-
+          
+      - name: Create tag
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git tag v1.0.0
+          git push origin v1.0.0
+          
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
